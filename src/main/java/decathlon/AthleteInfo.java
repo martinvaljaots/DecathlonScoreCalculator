@@ -4,28 +4,34 @@ package main.java.decathlon;
  * Created by Smarta on 15.08.2017.
  */
 public class AthleteInfo {
-
-    //explanatory comment form:
-    //field name - unit of measurement
+    /**
+     * Explanatory comments for variables are marked as:
+     * field/variable name - unit of measurement
+     *
+     * Units for certain events:
+     * track events - time in seconds
+     * jumps - centimeters
+     * throws - meters
+     */
 
     //athlete name - letters
     private String name;
     //100m - seconds
     private double oneHunResult;
-    //long jump - meters
-    private double longJResult;
+    //long jump - centimeters
+    private int longJResult;
     //shot put - meters
     private double shotPResult;
-    //high jump - meters
-    private double highJResult;
+    //high jump - centimeters
+    private int highJResult;
     //400m - seconds
     private double fourHunResult;
     //110m hurdles - seconds
     private double oneTenHurdlesResult;
     //discus throw - meters
     private double discusTResult;
-    //pole vault - meters
-    private double poleVResult;
+    //pole vault - centimeters
+    private int poleVResult;
     //javelin throw - meters
     private double javelinTResult;
     //1500m - seconds
@@ -40,7 +46,7 @@ public class AthleteInfo {
         this.oneHunResult = oneHunResult;
     }
 
-    public void setLongJResult(double longJResult) {
+    public void setLongJResult(int longJResult) {
         this.longJResult = longJResult;
     }
 
@@ -48,7 +54,7 @@ public class AthleteInfo {
         this.shotPResult = shotPResult;
     }
 
-    public void setHighJResult(double highJResult) {
+    public void setHighJResult(int highJResult) {
         this.highJResult = highJResult;
     }
 
@@ -64,7 +70,7 @@ public class AthleteInfo {
         this.discusTResult = discusTResult;
     }
 
-    public void setPoleVResult(double poleVResult) {
+    public void setPoleVResult(int poleVResult) {
         this.poleVResult = poleVResult;
     }
 
@@ -112,9 +118,7 @@ public class AthleteInfo {
         return this.poleVResult;
     }
 
-    public double getJavelinTResult() {
-        return this.javelinTResult;
-    }
+    public double getJavelinTResult() { return this.javelinTResult; }
 
     public double getFifteenHunResult() {
         return this.fifteenHunResult;

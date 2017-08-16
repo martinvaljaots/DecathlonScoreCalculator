@@ -3,9 +3,7 @@ package main.java.decathlon;
 import org.junit.Test;
 import static org.junit.Assert.assertEquals;
 
-/**
- * Created by Smarta on 15.08.2017.
- */
+
 public class AthleteInfoTest {
     @Test
     public void setAndGetNameTest() throws Exception {
@@ -24,8 +22,8 @@ public class AthleteInfoTest {
     @Test
     public void setAndGetLongJResultTest() throws Exception {
         AthleteInfo ai = new AthleteInfo();
-        ai.setLongJResult(100.11);
-        assertEquals(ai.getLongJResult(), 100.11, 0);
+        ai.setLongJResult(100);
+        assertEquals(ai.getLongJResult(), 100, 0);
     }
 
     @Test
@@ -38,8 +36,8 @@ public class AthleteInfoTest {
     @Test
     public void setAndGetHighJResultTest() throws Exception {
         AthleteInfo ai = new AthleteInfo();
-        ai.setHighJResult(100.11);
-        assertEquals(ai.getHighJResult(), 100.11, 0);
+        ai.setHighJResult(100);
+        assertEquals(ai.getHighJResult(), 100, 0);
     }
 
     @Test
@@ -66,8 +64,8 @@ public class AthleteInfoTest {
     @Test
     public void setPoleVResultTest() throws Exception {
         AthleteInfo ai = new AthleteInfo();
-        ai.setPoleVResult(100.11);
-        assertEquals(ai.getPoleVResult(), 100.11, 0);
+        ai.setPoleVResult(100);
+        assertEquals(ai.getPoleVResult(), 100, 0);
     }
 
     @Test

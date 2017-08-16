@@ -1,11 +1,7 @@
 package main.java.decathlon;
 
-
-import javafx.scene.control.Tab;
-
 import java.io.File;
 import java.io.FileNotFoundException;
-import java.io.FileReader;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
@@ -18,9 +14,37 @@ public class InfoReader {
         ClassLoader classLoader = getClass().getClassLoader();
         Scanner file = new Scanner(new File(classLoader.getResource(filePath).getFile()));
 
-        List<AthleteInfo> AthleteInfoList = new ArrayList<>();
+        List<AthleteInfo> AthleteInfoList = new ArrayList<>(20);
+        int i = 0;
         while (file.hasNextLine()) {
-            System.out.println(file.nextLine());
+            String fileLine = file.nextLine();
+            String[] splitLine = fileLine.split(";");
+
+            AthleteInfo ai = new AthleteInfo();
+            try {
+                ai.setName(splitLine[0]);
+                ai.setOneHunResult(Double.parseDouble(splitLine[1]));
+                ai.setLongJResult(Integer.parseInt(splitLine[2]));
+                ai.setShotPResult(Double.parseDouble(splitLine[3]));
+                ai.setHighJResult(Integer.parseInt(splitLine[4]));
+                ai.setFourHunResult(Double.parseDouble(splitLine[5]));
+                ai.setOneTenHurdlesResult(Double.parseDouble(splitLine[6]));
+                ai.setDiscusTResult(Double.parseDouble(splitLine[7]));
+                ai.setPoleVResult(Integer.parseInt(splitLine[8]));
+                ai.setJavelinTResult(Double.parseDouble(splitLine[9]));
+                ai.setFifteenHunResult(Double.parseDouble(splitLine[10]));
+
+                //AthleteInfoList.set(i, ai);
+
+                System.out.println(ai.getName() + " " + ai.getOneHunResult() + " " + ai.getLongJResult() + " " +
+                        ai.getShotPResult() + " " + ai.getHighJResult() + " " + ai.getFourHunResult() + " " +
+                        ai.getOneTenHurdlesResult() + " " + ai.getDiscusTResult() + " " + ai.getPoleVResult() + " " +
+                        ai.getJavelinTResult() + " " + ai.getFifteenHunResult());
+                System.out.println(AthleteInfoList.indexOf(AthleteInfoList));
+                i++;
+            } catch (ArrayIndexOutOfBoundsException e) {
+                e.printStackTrace();
+            }
         }
     }
 }
