@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2149487e-b4e5-4d8e-8391-409769af740c" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/DecathlonScoreCalculator/main/java/decathlon/Main.class" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -630,7 +629,14 @@
       <option name="project" value="LOCAL" />
       <updated>1502971895171</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Made a bogosort version just to try it and it actually works, but I also found out about Collections.sort(), so I'll do that. Bogosort version is going in a separate branch.">
+      <created>1502971904212</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1502971904212</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TestHistory">
