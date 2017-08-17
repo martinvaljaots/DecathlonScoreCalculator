@@ -14,7 +14,7 @@ public class InfoReader {
         ClassLoader classLoader = getClass().getClassLoader();
         Scanner file = new Scanner(new File(classLoader.getResource(filePath).getFile()));
 
-        List<AthleteInfo> AthleteInfoList = new ArrayList<>(20);
+        List<AthleteInfo> AthleteInfoList = new ArrayList<>();
         int i = 0;
         while (file.hasNextLine()) {
             String fileLine = file.nextLine();
@@ -34,17 +34,22 @@ public class InfoReader {
                 ai.setJavelinTResult(Double.parseDouble(splitLine[9]));
                 ai.setFifteenHunResult(Double.parseDouble(splitLine[10]));
 
-                //AthleteInfoList.set(i, ai);
-
-                System.out.println(ai.getName() + " " + ai.getOneHunResult() + " " + ai.getLongJResult() + " " +
-                        ai.getShotPResult() + " " + ai.getHighJResult() + " " + ai.getFourHunResult() + " " +
-                        ai.getOneTenHurdlesResult() + " " + ai.getDiscusTResult() + " " + ai.getPoleVResult() + " " +
-                        ai.getJavelinTResult() + " " + ai.getFifteenHunResult());
-                System.out.println(AthleteInfoList.indexOf(AthleteInfoList));
+                AthleteInfoList.add(i, ai);
                 i++;
             } catch (ArrayIndexOutOfBoundsException e) {
                 e.printStackTrace();
             }
+
+        }
+
+        for (AthleteInfo aAthleteInfoList : AthleteInfoList) {
+            System.out.println(aAthleteInfoList.getName() + " " + aAthleteInfoList.getOneHunResult() +
+                    " " + aAthleteInfoList.getLongJResult() + " " + aAthleteInfoList.getShotPResult() +
+                    " " + aAthleteInfoList.getHighJResult() + " " + aAthleteInfoList.getFourHunResult()
+                    + " " + aAthleteInfoList.getOneTenHurdlesResult() + " " +
+                    aAthleteInfoList.getDiscusTResult() + " " + aAthleteInfoList.getPoleVResult() +
+                    " " + aAthleteInfoList.getJavelinTResult() + " " +
+                    aAthleteInfoList.getFifteenHunResult());
         }
     }
 }
