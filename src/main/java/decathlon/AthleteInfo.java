@@ -9,119 +9,125 @@ public class AthleteInfo {
      * field/variable name - unit of measurement
      *
      * Units for certain events:
-     * track events - time in seconds
-     * jumps - centimeters
-     * throws - meters
+     * track events (100m, 400m, 110m, 1500m) - time in seconds
+     * jumps (long jump, high jump, pole vault) - centimeters
+     * throws (shot put, discus throw, javelin throw)- meters
      */
 
     //athlete name - letters
     private String name;
     //100m - seconds
-    private double oneHunResult;
+    private double oneHundredResult;
     //long jump - centimeters
-    private int longJResult;
+    private int longJumpResult;
     //shot put - meters
-    private double shotPResult;
+    private double shotPutResult;
     //high jump - centimeters
-    private int highJResult;
+    private int highJumpResult;
     //400m - seconds
-    private double fourHunResult;
+    private double fourHundredResult;
     //110m hurdles - seconds
     private double oneTenHurdlesResult;
     //discus throw - meters
-    private double discusTResult;
+    private double discusThrowResult;
     //pole vault - centimeters
-    private int poleVResult;
+    private int poleVaultResult;
     //javelin throw - meters
-    private double javelinTResult;
+    private double javelinThrowResult;
     //1500m - seconds
-    private double fifteenHunResult;
+    private double fifteenHundredResult;
+
+    private int totalPoints;
 
 
     public void setName(String name) {
         this.name = name;
     }
 
-    public void setOneHunResult(double oneHunResult) {
-        this.oneHunResult = oneHunResult;
+    public void setOneHundredResult(double oneHundredResult) {
+        this.oneHundredResult = oneHundredResult;
     }
 
-    public void setLongJResult(int longJResult) {
-        this.longJResult = longJResult;
+    public void setLongJumpResult(int longJumpResult) {
+        this.longJumpResult = longJumpResult;
     }
 
-    public void setShotPResult(double shotPResult) {
-        this.shotPResult = shotPResult;
+    public void setShotPutResult(double shotPutResult) {
+        this.shotPutResult = shotPutResult;
     }
 
-    public void setHighJResult(int highJResult) {
-        this.highJResult = highJResult;
+    public void setHighJumpResult(int highJumpResult) {
+        this.highJumpResult = highJumpResult;
     }
 
-    public void setFourHunResult(double fourHunResult) {
-        this.fourHunResult = fourHunResult;
+    public void setFourHundredResult(double fourHundredResult) {
+        this.fourHundredResult = fourHundredResult;
     }
 
     public void setOneTenHurdlesResult(double oneTenHurdlesResult) {
         this.oneTenHurdlesResult = oneTenHurdlesResult;
     }
 
-    public void setDiscusTResult(double discusTResult) {
-        this.discusTResult = discusTResult;
+    public void setDiscusThrowResult(double discusThrowResult) {
+        this.discusThrowResult = discusThrowResult;
     }
 
-    public void setPoleVResult(int poleVResult) {
-        this.poleVResult = poleVResult;
+    public void setPoleVaultResult(int poleVaultResult) {
+        this.poleVaultResult = poleVaultResult;
     }
 
-    public void setJavelinTResult(double javelinTResult) {
-        this.javelinTResult = javelinTResult;
+    public void setJavelinThrowResult(double javelinThrowResult) {
+        this.javelinThrowResult = javelinThrowResult;
     }
 
-    public void setFifteenHunResult(double fifteenHunResult) {
-        this.fifteenHunResult = fifteenHunResult;
+    public void setFifteenHundredResult(double fifteenHundredResult) {
+        this.fifteenHundredResult = fifteenHundredResult;
     }
+
+    public void setTotalPoints(int totalPoints) { this.totalPoints = totalPoints; }
 
     public String getName() {
         return this.name;
     }
 
-    public double getOneHunResult() {
-        return this.oneHunResult;
+    public double getOneHundredResult() {
+        return this.oneHundredResult;
     }
 
-    public double getLongJResult() {
-        return this.longJResult;
+    public double getLongJumpResult() {
+        return this.longJumpResult;
     }
 
-    public double getShotPResult() {
-        return this.shotPResult;
+    public double getShotPutResult() {
+        return this.shotPutResult;
     }
 
-    public double getHighJResult() {
-        return this.highJResult;
+    public double getHighJumpResult() {
+        return this.highJumpResult;
     }
 
-    public double getFourHunResult() {
-        return this.fourHunResult;
+    public double getFourHundredResult() {
+        return this.fourHundredResult;
     }
 
     public double getOneTenHurdlesResult() {
         return this.oneTenHurdlesResult;
     }
 
-    public double getDiscusTResult() {
-        return this.discusTResult;
+    public double getDiscusThrowResult() {
+        return this.discusThrowResult;
     }
 
-    public double getPoleVResult() {
-        return this.poleVResult;
+    public double getPoleVaultResult() {
+        return this.poleVaultResult;
     }
 
-    public double getJavelinTResult() { return this.javelinTResult; }
+    public double getJavelinThrowResult() { return this.javelinThrowResult; }
 
-    public double getFifteenHunResult() {
-        return this.fifteenHunResult;
+    public double getFifteenHundredResult() {
+        return this.fifteenHundredResult;
     }
+
+    public double getTotalPoints() { return this.totalPoints; }
 
 }
