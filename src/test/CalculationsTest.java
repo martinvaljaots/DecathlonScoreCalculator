@@ -1,5 +1,5 @@
-package main.java.decathlon;
-
+import main.decathlon.AthleteInfo;
+import main.decathlon.Calculations;
 import org.junit.Test;
 
 import java.util.*;

@@ -1,4 +1,4 @@
-package main.java.decathlon;
+package main.decathlon;
 
 import java.io.File;
 import java.io.FileNotFoundException;
@@ -8,16 +8,17 @@ import java.util.Scanner;
 
 public class InfoReader {
 
-    String filePath = "decathlon/decathlon_results.txt";
+    private String filePath = "decathlon/decathlon_results.txt";
 
     public List<AthleteInfo> loadFile() throws FileNotFoundException {
         ClassLoader classLoader = getClass().getClassLoader();
-        Scanner file = new Scanner(new File(classLoader.getResource(filePath).getFile()));
+        File file = new File(classLoader.getResource(filePath).getFile());
+        Scanner scanFile = new Scanner(file);
 
         List<AthleteInfo> AthleteInfoList = new ArrayList<>();
         int i = 0;
-        while (file.hasNextLine()) {
-            String fileLine = file.nextLine();
+        while (scanFile.hasNextLine()) {
+            String fileLine = scanFile.nextLine();
             String[] splitLine = fileLine.split(";");
 
             AthleteInfo ai = new AthleteInfo();
@@ -42,15 +43,6 @@ public class InfoReader {
 
         }
 
-        for (AthleteInfo anAthleteInfoList : AthleteInfoList) {
-            System.out.println(anAthleteInfoList.getName() + " " + anAthleteInfoList.getOneHundredResult() +
-                    " " + anAthleteInfoList.getLongJumpResult() + " " + anAthleteInfoList.getShotPutResult() +
-                    " " + anAthleteInfoList.getHighJumpResult() + " " + anAthleteInfoList.getFourHundredResult()
-                    + " " + anAthleteInfoList.getOneTenHurdlesResult() + " " +
-                    anAthleteInfoList.getDiscusThrowResult() + " " + anAthleteInfoList.getPoleVaultResult() +
-                    " " + anAthleteInfoList.getJavelinThrowResult() + " " +
-                    anAthleteInfoList.getFifteenHundredResult());
-        }
         return AthleteInfoList;
     }
 }

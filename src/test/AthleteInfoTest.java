@@ -1,5 +1,4 @@
-package main.java.decathlon;
-
+import main.decathlon.AthleteInfo;
 import org.junit.Test;
 import static org.junit.Assert.assertEquals;
 

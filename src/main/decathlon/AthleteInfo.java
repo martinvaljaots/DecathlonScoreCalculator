@@ -1,8 +1,6 @@
-package main.java.decathlon;
+package main.decathlon;
 
-/**
- * Created by Smarta on 15.08.2017.
- */
+
 public class AthleteInfo {
     /**
      * Explanatory comments for variables are marked as:

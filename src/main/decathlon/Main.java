@@ -1,4 +1,4 @@
-package main.java.decathlon;
+package main.decathlon;
 
 import java.io.FileNotFoundException;
 import java.util.*;
@@ -30,9 +30,10 @@ public class Main {
                 return 0;
             }
         });
-        int i = 0;
+
+        int i = 1;
         for(AthleteInfo ai : athleteInfoList) {
-            System.out.println(i + ". " + ai.getName() + " (" + ai.getTotalPoints() + ")");
+            System.out.println(i + ".\t" + ai.getName() + "  (" + ai.getTotalPoints() + ")");
             i++;
         }
     }

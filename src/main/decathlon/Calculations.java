@@ -1,4 +1,4 @@
-package main.java.decathlon;
+package main.decathlon;
 
 import java.util.List;
 
