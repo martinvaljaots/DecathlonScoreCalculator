@@ -13,35 +13,35 @@ public class AthleteInfoTest {
     }
 
     @Test
-    public void setAndGetOneHunResultTest() throws Exception {
+    public void setAndGetOneHundredResultTest() throws Exception {
         AthleteInfo ai = new AthleteInfo();
         ai.setOneHundredResult(100.11);
         assertEquals(ai.getOneHundredResult(), 100.11, 0);
     }
 
     @Test
-    public void setAndGetLongJResultTest() throws Exception {
+    public void setAndGetLongJumpResultTest() throws Exception {
         AthleteInfo ai = new AthleteInfo();
         ai.setLongJumpResult(100);
         assertEquals(ai.getLongJumpResult(), 100, 0);
     }
 
     @Test
-    public void setAndGetShotPResultTest() throws Exception {
+    public void setAndGetShotPutResultTest() throws Exception {
         AthleteInfo ai = new AthleteInfo();
         ai.setShotPutResult(100.11);
         assertEquals(ai.getShotPutResult(), 100.11, 0);
     }
 
     @Test
-    public void setAndGetHighJResultTest() throws Exception {
+    public void setAndGetHighJumpResultTest() throws Exception {
         AthleteInfo ai = new AthleteInfo();
         ai.setHighJumpResult(100);
         assertEquals(ai.getHighJumpResult(), 100, 0);
     }
 
     @Test
-    public void setAndGetFourHunResultTest() throws Exception {
+    public void setAndGetFourHundredResultTest() throws Exception {
         AthleteInfo ai = new AthleteInfo();
         ai.setFourHundredResult(100.11);
         assertEquals(ai.getFourHundredResult(), 100.11, 0);
@@ -55,28 +55,28 @@ public class AthleteInfoTest {
     }
 
     @Test
-    public void setAndGetDiscusTResultTest() throws Exception {
+    public void setAndGetDiscusThrowResultTest() throws Exception {
         AthleteInfo ai = new AthleteInfo();
         ai.setDiscusThrowResult(100.11);
         assertEquals(ai.getDiscusThrowResult(), 100.11, 0);
     }
 
     @Test
-    public void setAndGetPoleVResultTest() throws Exception {
+    public void setAndGetPoleVaultResultTest() throws Exception {
         AthleteInfo ai = new AthleteInfo();
         ai.setPoleVaultResult(100);
         assertEquals(ai.getPoleVaultResult(), 100, 0);
     }
 
     @Test
-    public void setAndGetJavelinTResultTest() throws Exception {
+    public void setAndGetJavelinThrowResultTest() throws Exception {
         AthleteInfo ai = new AthleteInfo();
         ai.setJavelinThrowResult(100.11);
         assertEquals(ai.getJavelinThrowResult(), 100.11, 0);
     }
 
     @Test
-    public void setAndGetFifteenHunResultTest() throws Exception {
+    public void setAndGetFifteenHundredResultTest() throws Exception {
         AthleteInfo ai = new AthleteInfo();
         ai.setFifteenHundredResult(100.11);
         assertEquals(ai.getFifteenHundredResult(), 100.11, 0);

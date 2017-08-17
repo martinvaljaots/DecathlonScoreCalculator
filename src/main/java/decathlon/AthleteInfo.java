@@ -36,7 +36,7 @@ public class AthleteInfo {
     private double javelinThrowResult;
     //1500m - seconds
     private double fifteenHundredResult;
-
+    //total points - int value
     private int totalPoints;
 
 
@@ -94,7 +94,7 @@ public class AthleteInfo {
         return this.oneHundredResult;
     }
 
-    public double getLongJumpResult() {
+    public int getLongJumpResult() {
         return this.longJumpResult;
     }
 
@@ -102,7 +102,7 @@ public class AthleteInfo {
         return this.shotPutResult;
     }
 
-    public double getHighJumpResult() {
+    public int getHighJumpResult() {
         return this.highJumpResult;
     }
 
@@ -118,7 +118,7 @@ public class AthleteInfo {
         return this.discusThrowResult;
     }
 
-    public double getPoleVaultResult() {
+    public int getPoleVaultResult() {
         return this.poleVaultResult;
     }
 
@@ -128,6 +128,6 @@ public class AthleteInfo {
         return this.fifteenHundredResult;
     }
 
-    public double getTotalPoints() { return this.totalPoints; }
+    public int getTotalPoints() { return this.totalPoints; }
 
 }
