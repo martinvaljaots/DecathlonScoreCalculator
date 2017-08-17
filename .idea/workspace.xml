@@ -2,10 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2149487e-b4e5-4d8e-8391-409769af740c" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/decathlon/Sort.java" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/DecathlonScoreCalculator/main/java/decathlon/Main.class" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/decathlon/Main.java" afterPath="$PROJECT_DIR$/src/main/java/decathlon/Main.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -625,7 +623,14 @@
       <option name="project" value="LOCAL" />
       <updated>1502970062374</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Made a bogosort version just to try it and it actually works, but I also found out about Collections.sort(), so I'll do that. Bogosort version is going in a separate branch.">
+      <created>1502971895171</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1502971895171</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -673,7 +678,7 @@
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32839838" sideWeight="0.5025707" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.33514985" sideWeight="0.4974293" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.33514985" sideWeight="0.4974293" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Properties" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32974428" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
@@ -738,7 +743,8 @@
     <MESSAGE value="Finished initial version of Calculations class. Next, need to test said class. Had accidentally forgotten to change get methods to return int for jumps - remedied that issue. Changed test names to match longer variable names." />
     <MESSAGE value="Added test for Calculations class (once again, all test will be in a separate test folder when I'm done." />
     <MESSAGE value="Added test for Calculations class (once again, all test will be in a separate test folder when I'm done). Next, need to add sorting for results (easy enough, but maybe do something more interesting/potentially faster than bubble sort?) and then make a printer class." />
-    <option name="LAST_COMMIT_MESSAGE" value="Added test for Calculations class (once again, all test will be in a separate test folder when I'm done). Next, need to add sorting for results (easy enough, but maybe do something more interesting/potentially faster than bubble sort?) and then make a printer class." />
+    <MESSAGE value="Made a bogosort version just to try it and it actually works, but I also found out about Collections.sort(), so I'll do that. Bogosort version is going in a separate branch." />
+    <option name="LAST_COMMIT_MESSAGE" value="Made a bogosort version just to try it and it actually works, but I also found out about Collections.sort(), so I'll do that. Bogosort version is going in a separate branch." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
