@@ -2,9 +2,12 @@ package main.java.decathlon;
 
 import java.util.List;
 
+import static java.lang.Math.*;
+import static java.lang.Math.pow;
+
 public class Calculations {
 
-    public List<AthleteInfo> calculateTotalPoints(List<AthleteInfo> AthleteInfoList) {
+    public static List<AthleteInfo> calculateTotalPoints(List<AthleteInfo> AthleteInfoList) {
 
         for (AthleteInfo anAthleteInfo : AthleteInfoList) {
             int oneHundredPoints = calculateTrackPoints(anAthleteInfo.getOneHundredResult(),
@@ -36,18 +39,18 @@ public class Calculations {
     }
 
 
-    private int calculateTrackPoints(double time, double a, double b, double c) {
-        double points = Math.pow(a * (b - time), c);
-        return (int)Math.floor(points);
+    private static int calculateTrackPoints(double time, double a, double b, double c) {
+        double points = a * pow((b - time), c);
+        return (int) floor(points);
     }
 
-    private int calculateJumpPoints(int measurement, double a, double b, double c) {
-        double points = Math.pow(a * (measurement - b), c);
-        return (int)Math.floor(points);
+    private static int calculateJumpPoints(int measurement, double a, double b, double c) {
+        double points = a * pow((measurement - b), c);
+        return (int) floor(points);
     }
 
-    private int calculateThrowPoints(double distance, double a, double b, double c) {
-        double points = Math.pow(a * (distance - b), c);
-        return (int)Math.floor(points);
+    private static int calculateThrowPoints(double distance, double a, double b, double c) {
+        double points = a * pow((distance - b), c);
+        return (int) floor(points);
     }
 }
