@@ -17,7 +17,7 @@ public class InfoReader {
      * Method for reading the results file and separating the results into Athlete instances.
      * Returns a list of Athlete instances, one for every line of the file.
      */
-    public List<Athlete> readFile(String filePath) throws ArrayIndexOutOfBoundsException, IllegalFormatException {
+    public List<Athlete> readFile(String filePath) throws ArrayIndexOutOfBoundsException, NumberFormatException {
         InputStream is = getClass().getResourceAsStream(filePath);
         Scanner scanFile = new Scanner(new BufferedInputStream(is));
 

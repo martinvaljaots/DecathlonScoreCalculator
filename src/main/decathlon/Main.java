@@ -23,7 +23,7 @@ public class Main {
         } catch (ArrayIndexOutOfBoundsException e) {
             System.out.println("One or more lines in info file are missing results!");
             e.printStackTrace();
-        } catch (IllegalFormatException e) {
+        } catch (NumberFormatException e) {
             System.out.println("One or more events have been marked down in incorrect format!");
             e.printStackTrace();
         }
