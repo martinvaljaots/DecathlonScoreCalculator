@@ -22,12 +22,6 @@ public class InfoReaderTest {
         ir.readFile("");
     }
 
-    @Test(expected = FileNotFoundException.class)
-    public void readFileFileNotFoundExceptionTest() throws Exception {
-       InfoReader ir = new InfoReader();
-       ir.readFile("");
-    }
-
     @Test (expected = IllegalFormatException.class)
     public void readFileIllegalFormatExceptionTest() throws Exception {
 

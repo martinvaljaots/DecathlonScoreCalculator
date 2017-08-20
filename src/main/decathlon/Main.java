@@ -20,9 +20,6 @@ public class Main {
 
         try {
             athleteList = ir.readFile(filePath);
-        } catch (FileNotFoundException e) {
-            System.out.println("Could not find info file!");
-            e.printStackTrace();
         } catch (ArrayIndexOutOfBoundsException e) {
             System.out.println("One or more lines in info file are missing results!");
             e.printStackTrace();
