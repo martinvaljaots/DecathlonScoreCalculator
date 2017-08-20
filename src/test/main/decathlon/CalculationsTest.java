@@ -1,3 +1,5 @@
+package main.decathlon;
+
 import main.decathlon.Athlete;
 import main.decathlon.Calculations;
 import org.junit.Test;

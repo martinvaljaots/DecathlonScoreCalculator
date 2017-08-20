@@ -5,8 +5,16 @@ import java.util.List;
 import static java.lang.Math.*;
 import static java.lang.Math.pow;
 
+/**
+ * Class for calculating points for each event and combining them into total points.
+ */
+
 public class Calculations {
 
+    /**
+     * Method for calling other methods to calculate points for each event and total points.
+     * Returns list of all athletes with value added to totalPoints.
+     */
     public List<Athlete> calculateTotalPoints(List<Athlete> athleteList) {
 
         for (Athlete anAthlete : athleteList) {
@@ -38,17 +46,19 @@ public class Calculations {
         return athleteList;
     }
 
-
+    //Method for calculating points for track events.
     private int calculateTrackPoints(double time, double a, double b, double c) {
         double points = a * pow((b - time), c);
         return (int) floor(points);
     }
 
+    //Method for calculating points for jump events.
     private int calculateJumpPoints(int measurement, double a, double b, double c) {
         double points = a * pow((measurement - b), c);
         return (int) floor(points);
     }
 
+    //Method for calculating points for throw events.
     private int calculateThrowPoints(double distance, double a, double b, double c) {
         double points = a * pow((distance - b), c);
         return (int) floor(points);

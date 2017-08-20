@@ -12,13 +12,22 @@ public class Main {
 
     public static void main(String[] args) {
 
+        //Path to results file.
+        String filePath = "/decathlon/decathlon_results.txt";
+
         InfoReader ir = new InfoReader();
         List<Athlete> athleteList = new ArrayList<>();
 
         try {
-            athleteList = ir.loadFile();
+            athleteList = ir.readFile(filePath);
         } catch (FileNotFoundException e) {
             System.out.println("Could not find info file!");
+            e.printStackTrace();
+        } catch (ArrayIndexOutOfBoundsException e) {
+            System.out.println("One or more lines in info file are missing results!");
+            e.printStackTrace();
+        } catch (IllegalFormatException e) {
+            System.out.println("One or more events have been marked down in incorrect format!");
             e.printStackTrace();
         }
         Calculations calc = new Calculations();
@@ -40,7 +49,7 @@ public class Main {
 
         int i = 1;
         for(Athlete ai : athleteList) {
-            System.out.println(i + ".\t" + ai.getName() + "  (" + ai.getTotalPoints() + ")");
+            System.out.println(i + ".\t" + ai.getName() + " \t(" + ai.getTotalPoints() + ")");
             i++;
         }
     }

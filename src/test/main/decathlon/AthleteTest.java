@@ -1,3 +1,5 @@
+package main.decathlon;
+
 import main.decathlon.Athlete;
 import org.junit.Test;
 import static org.junit.Assert.assertEquals;
