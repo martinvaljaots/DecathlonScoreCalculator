@@ -1,7 +1,7 @@
 package main.decathlon;
 
 
-public class AthleteInfo {
+public class Athlete {
     /**
      * Explanatory comments for variables are marked as:
      * field/variable name - unit of measurement

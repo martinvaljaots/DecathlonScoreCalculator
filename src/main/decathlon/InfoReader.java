@@ -1,27 +1,25 @@
 package main.decathlon;
 
-import java.io.File;
-import java.io.FileNotFoundException;
+import java.io.*;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
 public class InfoReader {
 
-    private String filePath = "decathlon/decathlon_results.txt";
+    private String filePath = "/decathlon/decathlon_results.txt";
 
-    public List<AthleteInfo> loadFile() throws FileNotFoundException {
-        ClassLoader classLoader = getClass().getClassLoader();
-        File file = new File(classLoader.getResource(filePath).getFile());
-        Scanner scanFile = new Scanner(file);
+    public List<Athlete> loadFile() throws FileNotFoundException {
+        InputStream is = getClass().getResourceAsStream(filePath);
+        Scanner scanFile = new Scanner(new BufferedInputStream(is));
 
-        List<AthleteInfo> AthleteInfoList = new ArrayList<>();
+        List<Athlete> athleteList = new ArrayList<>();
         int i = 0;
         while (scanFile.hasNextLine()) {
             String fileLine = scanFile.nextLine();
             String[] splitLine = fileLine.split(";");
 
-            AthleteInfo ai = new AthleteInfo();
+            Athlete ai = new Athlete();
             try {
                 ai.setName(splitLine[0]);
                 ai.setOneHundredResult(Double.parseDouble(splitLine[1]));
@@ -35,7 +33,7 @@ public class InfoReader {
                 ai.setJavelinThrowResult(Double.parseDouble(splitLine[9]));
                 ai.setFifteenHundredResult(Double.parseDouble(splitLine[10]));
 
-                AthleteInfoList.add(i, ai);
+                athleteList.add(i, ai);
                 i++;
             } catch (ArrayIndexOutOfBoundsException e) {
                 e.printStackTrace();
@@ -43,6 +41,6 @@ public class InfoReader {
 
         }
 
-        return AthleteInfoList;
+        return athleteList;
     }
 }

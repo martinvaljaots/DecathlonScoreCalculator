@@ -5,22 +5,29 @@ import java.util.*;
 
 public class Main {
 
+    //TODO: write test for InfoReader
+    //TODO: clean up code
+    //TODO: comment code
+    //TODO: deal with exceptions
+
     public static void main(String[] args) {
-	    // runs InfoReader.loadFile for the time being
+
         InfoReader ir = new InfoReader();
-        List<AthleteInfo> athleteInfoList = new ArrayList<>();
+        List<Athlete> athleteList = new ArrayList<>();
 
         try {
-            athleteInfoList = ir.loadFile();
+            athleteList = ir.loadFile();
         } catch (FileNotFoundException e) {
+            System.out.println("Could not find info file!");
             e.printStackTrace();
         }
-        athleteInfoList = Calculations.calculateTotalPoints(athleteInfoList);
+        Calculations calc = new Calculations();
+        athleteList = calc.calculateTotalPoints(athleteList);
 
-        Collections.sort(athleteInfoList, new Comparator<AthleteInfo>() {
+        Collections.sort(athleteList, new Comparator<Athlete>() {
 
             @Override
-            public int compare(AthleteInfo athlete1, AthleteInfo athlete2) {
+            public int compare(Athlete athlete1, Athlete athlete2) {
                 if (athlete1.getTotalPoints() < athlete2.getTotalPoints()) {
                     return 1;
                 }
@@ -32,7 +39,7 @@ public class Main {
         });
 
         int i = 1;
-        for(AthleteInfo ai : athleteInfoList) {
+        for(Athlete ai : athleteList) {
             System.out.println(i + ".\t" + ai.getName() + "  (" + ai.getTotalPoints() + ")");
             i++;
         }

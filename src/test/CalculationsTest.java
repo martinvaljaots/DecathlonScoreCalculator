@@ -1,4 +1,4 @@
-import main.decathlon.AthleteInfo;
+import main.decathlon.Athlete;
 import main.decathlon.Calculations;
 import org.junit.Test;
 
@@ -11,8 +11,8 @@ public class CalculationsTest {
 
     @Test
     public void calculateTotalPointsTest() throws Exception {
-        List<AthleteInfo> AthleteInfoList = new ArrayList<>();
-        AthleteInfo ai = new AthleteInfo();
+        List<Athlete> athleteList = new ArrayList<>();
+        Athlete ai = new Athlete();
         ai.setOneHundredResult(10.2);
         ai.setLongJumpResult(790);
         ai.setShotPutResult(18.75);
@@ -24,9 +24,10 @@ public class CalculationsTest {
         ai.setJavelinThrowResult(81.00);
         ai.setFifteenHundredResult(220.0);
 
-        AthleteInfoList.add(0, ai);
+        athleteList.add(0, ai);
 
-        List<AthleteInfo> returnedInfoList = Calculations.calculateTotalPoints(AthleteInfoList);
+        Calculations calc = new Calculations();
+        List<Athlete> returnedInfoList = calc.calculateTotalPoints(athleteList);
 
         assertEquals(10124, returnedInfoList.get(0).getTotalPoints());
     }
