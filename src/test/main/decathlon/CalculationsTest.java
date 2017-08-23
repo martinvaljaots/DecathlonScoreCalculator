@@ -1,16 +1,18 @@
 package main.decathlon;
 
-import main.decathlon.Athlete;
-import main.decathlon.Calculations;
 import org.junit.Test;
-
 import java.util.*;
-
 import static org.junit.Assert.*;
 
-
+/**
+ * Class for testing Calculations class.
+ */
 public class CalculationsTest {
 
+    /**
+     * Method to test that the method calculateTotalPoints(List<Athlete> athleteList) calculates correctly.
+     * Based on results from: http://www.decathlon2000.com/884/decathlon-points-calculator/
+     */
     @Test
     public void calculateTotalPointsTest() throws Exception {
         List<Athlete> athleteList = new ArrayList<>();

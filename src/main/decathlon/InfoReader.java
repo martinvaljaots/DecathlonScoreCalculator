@@ -2,7 +2,6 @@ package main.decathlon;
 
 import java.io.*;
 import java.util.ArrayList;
-import java.util.IllegalFormatException;
 import java.util.List;
 import java.util.Scanner;
 
@@ -10,9 +9,6 @@ import java.util.Scanner;
  * Class containing readFile() method for reading the results file.
  */
 public class InfoReader {
-
-
-
     /**
      * Method for reading the results file and separating the results into Athlete instances.
      * Returns a list of Athlete instances, one for every line of the file.

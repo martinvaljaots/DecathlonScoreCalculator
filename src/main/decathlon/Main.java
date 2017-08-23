@@ -1,14 +1,11 @@
 package main.decathlon;
 
-import java.io.FileNotFoundException;
 import java.util.*;
 
+/**
+ * Main class containing main method.
+ */
 public class Main {
-
-    //TODO: write test for InfoReader
-    //TODO: clean up code
-    //TODO: comment code
-    //TODO: deal with exceptions
 
     public static void main(String[] args) {
 
@@ -18,6 +15,7 @@ public class Main {
         InfoReader ir = new InfoReader();
         List<Athlete> athleteList = new ArrayList<>();
 
+        //Reading the results file.
         try {
             athleteList = ir.readFile(filePath);
         } catch (ArrayIndexOutOfBoundsException e) {
@@ -27,23 +25,23 @@ public class Main {
             System.out.println("One or more events have been marked down in incorrect format!");
             e.printStackTrace();
         }
+
+        //Calculating total points.
         Calculations calc = new Calculations();
         athleteList = calc.calculateTotalPoints(athleteList);
 
-        Collections.sort(athleteList, new Comparator<Athlete>() {
-
-            @Override
-            public int compare(Athlete athlete1, Athlete athlete2) {
-                if (athlete1.getTotalPoints() < athlete2.getTotalPoints()) {
-                    return 1;
-                }
-                if (athlete1.getTotalPoints() > athlete2.getTotalPoints()) {
-                    return -1;
-                }
-                return 0;
+        //Comparator for the sorting. Sorts the athletes to be in decreasing order by totalPoints.
+        Collections.sort(athleteList, (athlete1, athlete2) -> {
+            if (athlete1.getTotalPoints() < athlete2.getTotalPoints()) {
+                return 1;
             }
+            if (athlete1.getTotalPoints() > athlete2.getTotalPoints()) {
+                return -1;
+            }
+            return 0;
         });
 
+        //Printing of athlete names and total points.
         int i = 1;
         for(Athlete ai : athleteList) {
             System.out.println(i + ".\t" + ai.getName() + " \t(" + ai.getTotalPoints() + ")");

@@ -8,13 +8,15 @@ import java.util.List;
 import static org.junit.Assert.*;
 
 /**
- * Created by Smarta on 20.08.2017.
+ * Class for testing InfoReader class.
  */
 public class InfoReaderTest {
+
+    //Tests that readFile(String filePath) is able to read variables from file and assign read values to variables.
     @Test
     public void readFileTest() throws Exception {
         InfoReader ir = new InfoReader();
-        List<Athlete> at = new ArrayList<>();
+        List<Athlete> at;
 
         at = ir.readFile("/decathlon/read_file_test.txt");
 
@@ -44,13 +46,14 @@ public class InfoReaderTest {
 
     }
 
+    //Tests that readFile throws exception when a line in the file has too few arguments.
     @Test (expected = ArrayIndexOutOfBoundsException.class)
     public void readFileArrayIndexOutOfBoundsTest() throws Exception {
         InfoReader ir = new InfoReader();
-        List<Athlete> at = new ArrayList<>();
-        at = ir.readFile("/decathlon/array_index_out_of_bounds_test.txt");
+        ir.readFile("/decathlon/array_index_out_of_bounds_test.txt");
     }
 
+    //Tests that readFile throws exception when a double or int field is in incorrect format.
     @Test (expected = NumberFormatException.class)
     public void readFileNumberFormatExceptionTest() throws Exception {
         InfoReader ir = new InfoReader();

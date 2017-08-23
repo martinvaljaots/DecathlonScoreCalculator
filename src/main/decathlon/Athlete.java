@@ -1,6 +1,5 @@
 package main.decathlon;
 
-
 public class Athlete {
     /**
      * Explanatory comments for variables are marked as:
@@ -37,6 +36,9 @@ public class Athlete {
     //total points - int value
     private int totalPoints;
 
+    /**
+     * get and set methods for the class.
+     */
 
     public void setName(String name) {
         this.name = name;

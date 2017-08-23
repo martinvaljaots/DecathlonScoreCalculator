@@ -7,13 +7,14 @@ import static java.lang.Math.pow;
 
 /**
  * Class for calculating points for each event and combining them into total points.
+ * Calculations are based on https://www.decathlon2000.com/upload/file/pdf/scoringtables.pdf , page 24.
  */
 
 public class Calculations {
 
     /**
      * Method for calling other methods to calculate points for each event and total points.
-     * Returns list of all athletes with value added to totalPoints.
+     * Returns input list of all athletes with value added to totalPoints.
      */
     public List<Athlete> calculateTotalPoints(List<Athlete> athleteList) {
 
